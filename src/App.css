@@ -3,8 +3,8 @@ body{
     font-family:Arial, Helvetica, sans-serif;
 }
 .Navbar{
-    margin-left: 780px;
     display: flex;
+    justify-content: center;
 }
 .fixed{
     padding-left: 30px;
@@ -23,7 +23,7 @@ body{
 }
 .name h1{
     color: white;
-    font-size: 20px;
+    font-size: 1.3vw;
     font-family: 'Times New Roman', Times, serif;
 }
 .name h2{
@@ -114,26 +114,39 @@ background: linear-gradient(180deg,rgba(7, 130, 245, 0.5) 0%, rgba(255, 255, 255
     color: rgb(140, 140, 140);
 }
 .about{
-    margin-left: 665px;
-    margin-top: 110px;
+    
 }
 .about h1{
-font-size: 45px;
-color: white;
-}
-.about h2{
-margin-top: -20px;
-font-size: 45px;
-margin-left: 160px;
+font-size: 2.5vw;
 color: white;
 }
 .infoCard{
-    width: 400px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    height: 350px;
+    width: 720px;
     margin-left: 660px;
+    background-color: rgb(32, 32, 32);
+    border: 3px solid rgb(83, 83, 83);
+    border-radius: 30px;
+    padding: 50px;
 }
-.infoCard pre{
-    font-size: 25px;
-    color: rgb(142, 141, 141);
+.infoCard h2{
+   font-family: "Gill Sans Extrabold", sans-serif;
+    font-size: 22px;
+    color: rgb(158, 158, 158);
+}
+.infoCard h1{
+    
+    color: white;
+}
+.Cards{
+    position: relative;
+    margin-left: -70px;
+    margin-bottom: 740px;
+    user-select: none;
 }
 .CArds div img{
     width: 150px;
@@ -196,8 +209,8 @@ input{
     font-size: 40px;
     margin-top: 20px;
 }
-.Text{
-    margin-top: -290px;
+.text{
+    margin-top: -300px;
     margin-left: 400px;
 }
 .Country{
@@ -240,4 +253,39 @@ position: absolute;
 color: white;
 font-size: 35px;
 margin-top: -50px;
+}
+.one{
+    position: absolute;
+    margin-top: 50px;
+    z-index: 7;
+}
+.two{
+    position: absolute;
+    margin-top: 65px;
+    z-index: 6;
+}
+.three{
+    position: absolute;
+    margin-top: 80px;
+    z-index: 5;
+}
+.four{
+    position: absolute;
+    margin-top: 95px;
+    z-index: 4;
+}
+.five{
+    position: absolute;
+    margin-top: 110px;
+    z-index: 3;
+}
+.six{
+    position: absolute;
+    margin-top: 125px;
+    z-index: 2;
+}
+.seven{
+    position: absolute;
+    margin-top: 140px;
+    z-index: 1;
 }
