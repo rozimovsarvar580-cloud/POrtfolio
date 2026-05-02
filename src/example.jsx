@@ -109,11 +109,13 @@ function Example(){
     filteredArray = []
         let i  = 0
      try {
-        const responce = await fetch('https://restcountries.com/v3.1/all?fields=name,capital,currencies,continents,borders,flags,languages,population,region,cca3')
-        const data = await responce.json()
+        const responce = await fetch('https://restcountries.com/v3.1/all?fields=name,capital,continents,borders,flags,languages,population,region,cca3,maps')
+        let data = await responce.json()
+        data=data.sort((a,b)=>a.name.common.localeCompare(b.name.common))
         const input = document.querySelector('input')
         const select = document.querySelector('select')
         const CArds = document.querySelector('.CArds')
+        console.log(data)
         CArds.innerHTML = ''
         if(select.value === 'All'){
             Array = data

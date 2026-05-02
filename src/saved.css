@@ -86,7 +86,7 @@ a{
     border: solid rgb(101, 101, 101) 1px;
     border-radius: 20px;
     margin-top: 80px;
-    margin-left: 660px;
+    margin-left: 730px;
     transition: 0.1s;
 }
 .card:hover{
@@ -126,26 +126,26 @@ color: white;
     flex-direction: column;
     justify-content: center;
     align-items: center;
-    height: 400px;
-    width: 800px;
-    margin-left: 560px;
+    height: 50%;
+    width: 50%;
+    margin-left: auto;
     background-color: rgb(32, 32, 32);
     border: 3px solid rgb(83, 83, 83);
     border-radius: 30px;
-    padding: 40px;
-    margin-bottom: 100px;
+    padding: auto;
 }
 .infoCard h2{
    font-family: "Gill Sans Extrabold", sans-serif;
-  font-size: 25px;
+  font-size: 1.5vw;
     color: rgb(158, 158, 158);
 }
 .infoCard h1{
-    font-size: 35px;
+    font-size: 1.7;
     color: white;
 }
 .Cards{
-    margin-bottom:750px ;
+    margin-left: auto;
+    margin-bottom: auto;
     user-select: none;
 }
 .CArds div img{
@@ -175,6 +175,7 @@ color: white;
     margin-top: 100px;
     display: grid;
     grid-template-columns: auto auto auto auto auto;
+    
     gap: 30px;
     margin-bottom: -150px;
     margin-left: 200px;

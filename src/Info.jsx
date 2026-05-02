@@ -18,7 +18,7 @@ function Info(){
       if(currentCard){
         if(currentCard.classList.contains('one')){
         currentCard.style.marginTop = `140px`
-        currentCard.style.marginLeft = `660px`
+        currentCard.style.marginLeft = `560px`
         currentCard.style.zIndex = '0'
         numberTop = 50
         numberZ = 7
@@ -33,7 +33,7 @@ function Info(){
         })
       }else{
         currentCard.style.marginTop = `140px`
-        currentCard.style.marginLeft = `660px`
+        currentCard.style.marginLeft = `560px`
         currentCard.style.zIndex = '0'
         cards.forEach((card) =>{
           if(card !== currentCard){
