@@ -7,7 +7,7 @@ export default defineConfig({
   server: {
     proxy: {
       '/currency': {
-        target: 'https://api.currencybeacon.com',
+        target: '',
         changeOrigin: true,
         rewrite: (path) => path.replace(/^\/currency/, '')
       }

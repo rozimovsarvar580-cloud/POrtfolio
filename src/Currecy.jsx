@@ -36,7 +36,7 @@ function GetDates(startDate, endDate) {
 GetDates(start, end);
   async function Currency(){
     try {
-      const responce = await fetch(`/currency/v1/convert?api_key=Xp9Km6euYyV62ZT3oz3wzrcQ9bRQDUIa&from=${From}&to=${To}&amount=${Amount}`)
+      const responce = await fetch(`https://api.currencybeacon.com/v1/convert?api_key=Xp9Km6euYyV62ZT3oz3wzrcQ9bRQDUIa&from=${From}&to=${To}&amount=${Amount}`)
       const data = await responce.json()
       document.querySelector('#toNumber').value = data.value
     } catch (error) {
@@ -45,7 +45,7 @@ GetDates(start, end);
   }
   async function Chart(date) {
     try {
-      const responce = await fetch(`/currency/v1/historical?api_key=Xp9Km6euYyV62ZT3oz3wzrcQ9bRQDUIa&date=${date}&base=${From}&symbols=${To}`)
+      const responce = await fetch(`https://api.currencybeacon.com/v1/historical?api_key=Xp9Km6euYyV62ZT3oz3wzrcQ9bRQDUIa&date=${date}&base=${From}&symbols=${To}`)
       const data = await responce.json()
       return data
     } catch (error) {

@@ -364,23 +364,23 @@ h1{
     display: flex;
     justify-content: center;
     align-items: center;
-    width: 750px;
+    width: 760px;
     height: 100px;
     background-color: rgb(37, 37, 37);
     border: 3px solid rgb(66, 66, 66);
     border-radius: 20px;
-    padding: 10px;
+    padding: 11px;
 }
 .ConTo{
  display: flex;
     justify-content: center;
     align-items: center;
-    width: 750px;
+    width: 760px;
     height: 100px;
     background-color: rgb(37, 37, 37);
     border: 3px solid rgb(66, 66, 66);
     border-radius: 20px;  
-    padding: 10px; 
+    padding: 11px; 
 }
 #from{
     height: 35px;
@@ -438,25 +438,25 @@ h1{
     background-color: black;
 }
 .fromsymbol{
-    margin-top: 30px;
+    margin-top: 15px;
     margin-left: 5px;
     font-size: 20px;
 color: white;
 }
 .tosymbol{
-    margin-top: 30px;
+    margin-top: 15px;
     font-size: 20px;
     margin-left: 5px;
 color: white;
 }
 .fromValue{
-    margin-top: 30px;
+    margin-top: 15px;
     font-size: 20px;
 color: white;
 margin-left:  20px;
 }
 .tovalue{
-    margin-top: 30px;
+    margin-top: 15px;
     color: white;
     font-size: 20px;
     margin-left: 20px;
