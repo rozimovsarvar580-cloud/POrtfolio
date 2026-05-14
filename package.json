@@ -13,9 +13,13 @@
     "preview": "vite preview"
   },
   "dependencies": {
+    "chart": "^0.1.2",
+    "chart.js": "^4.5.1",
+    "chartjs": "^0.3.24",
     "gitignore": "^0.7.0",
     "leaflet": "^1.9.4",
     "react": "^19.2.4",
+    "react-chartjs-2": "^5.3.1",
     "react-dom": "^19.2.4",
     "react-router-dom": "^7.14.0"
   },

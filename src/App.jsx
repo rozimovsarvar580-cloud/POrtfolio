@@ -3,6 +3,8 @@ import Info from './Info'
 import {BrowserRouter,Routes,NavLink,Route} from 'react-router-dom'
 import './App.css'
 import Example from './example'
+import Country from "./country"
+import Currency from "./Currecy"
 function App() {
   return (
   <BrowserRouter>
@@ -20,7 +22,10 @@ function App() {
       <Routes>
         <Route path='/Work' element={<Work></Work>}></Route>
         <Route path='/' element={<Info></Info>}></Route>
-        <Route path='/example' element={<Example></Example>}></Route>
+        <Route path='/example/*' element={<Example></Example>}>
+         <Route path="Country" element={<Country></Country>} />
+         <Route path="Currency" element={<Currency></Currency>} />
+        </Route>
       </Routes>
     <div className='footer'>© 2026 Sarvar Rozimov. All Rights Reserved.</div>
     </BrowserRouter>
