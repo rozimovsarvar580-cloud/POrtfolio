@@ -81,7 +81,11 @@ let Array = []
         let d = 0
         let r = 0
       try {
-        const responce = await fetch('https://restcountries.com/v3.1/all?fields=name,capital,borders,flags,languages,population,region,cca3,cca2,maps')
+        const responce = await fetch('http://localhost:3001/countries', {
+         method: "POST",
+         headers: { "Content-Type": "application/json" },
+         body: JSON.stringify({user:'sarvar',email:'rozimovsarvar580', password:'12345'})
+       })
         const data = await responce.json()
         const CArds = document.querySelector('.CArds')
         const input =document.querySelector('input')
@@ -104,7 +108,7 @@ let Array = []
             let div = document.createElement('p')
             div.className = 'Country'
             div.innerHTML = ` 
-            <img src=${Array[d].flags.svg} />
+            <img src=${Array[d].flags[0]} />
             <h1 class ='text'>
             <li>Name: ${Array[d].name.common}</li>
             <li>Capital: ${Array[d].capital}</li>
@@ -1077,7 +1081,7 @@ let Array = []
                 BorderingCountries.push({Name:item.name.common === 'Russia' ? item.name.official:item.name.common.replace(/\s+/g, ""),Id:item.cca2})
                  div2.onclick=(e)=> MoreInfo(e)  
             div2.innerHTML = `
-            <img src=${item.flags.svg} />
+            <img src=${item.flags[0]} />
             <li>Name: ${item.name.common}</li>
                 `
                 div.appendChild(div2)
@@ -1103,7 +1107,7 @@ let Array = []
             let div = document.createElement('p')
             div.className = 'Country'
             div.innerHTML = ` 
-            <img src=${Array[d].flags.svg} />
+            <img src=${Array[d].flags[0]} />
             <h1 class ='text'>
             <li>Name: ${Array[d].name.common}</li>
             <li>Capital: ${Array[d].capital}</li>
@@ -2076,7 +2080,7 @@ let Array = []
                  BorderingCountries.push({Name:item.name.common === 'Russia' ? item.name.official:item.name.common.replace(/\s+/g, ""),Id:item.cca2})
                  div2.onclick=(e)=> MoreInfo(e)     
             div2.innerHTML = `
-            <img src=${item.flags.svg} />
+            <img src=${item.flags[0]} />
             <li>Name: ${item.name.common}</li>
                 `
                 div.appendChild(div2)
@@ -2103,7 +2107,7 @@ let Array = []
             let div = document.createElement('p')
             div.className = 'Country'
             div.innerHTML = ` 
-            <img src=${Array[d].flags.svg} />
+            <img src=${Array[d].flags[0]} />
             <h1 class ='text'>
             <li>Name: ${Array[d].name.common}</li>
             <li>Capital: ${Array[d].capital}</li>
@@ -3076,7 +3080,7 @@ let Array = []
                 BorderingCountries.push({Name:item.name.common === 'Russia' ? item.name.official:item.name.common,Id:item.cca2})
                  div2.onclick=(e)=> MoreInfo(e)  
             div2.innerHTML = `
-            <img src=${item.flags.svg} />
+            <img src=${item.flags[0]} />
             <li>Name: ${item.name.common}</li>
                 `
                 div.appendChild(div2)
@@ -3101,7 +3105,7 @@ let Array = []
             let div = document.createElement('p')
             div.className = 'Country'
             div.innerHTML = ` 
-            <img src=${Array[d].flags.svg} />
+            <img src=${Array[d].flags[0]} />
             <h1 class ='text'>
             <li>Name: ${Array[d].name.common}</li>
             <li>Capital: ${Array[d].capital}</li>
@@ -4074,7 +4078,7 @@ let Array = []
                 BorderingCountries.push({Name:item.name.common === 'Russia' ? item.name.official:item.name.common,Id:item.cca2})
                  div2.onclick=(e)=> MoreInfo(e)  
             div2.innerHTML = `
-            <img src=${item.flags.svg} />
+            <img src=${item.flags[0]} />
             <li>Name: ${item.name.common}</li>
                 `
                 div.appendChild(div2)
@@ -4099,13 +4103,16 @@ let Array = []
     filteredArray = []
         let i  = 0
      try {
-        const responce = await fetch('https://restcountries.com/v3.1/all?fields=name,capital,continents,borders,flags,languages,population,region,cca3,maps')
+        const responce = await fetch('http://localhost:3001/countries', {
+         method: "POST",
+         headers: { "Content-Type": "application/json" },
+         body: JSON.stringify({user:'sarvar',email:'rozimovsarvar580', password:'12345'})
+       })
         let data = await responce.json()
         data=data.sort((a,b)=>a.name.common.localeCompare(b.name.common))
         const input = document.querySelector('input')
         const select = document.querySelector('select')
         const CArds = document.querySelector('.CArds')
-        console.log(data)
         CArds.innerHTML = ''
         if(select.value === 'All'){
             Array = data
@@ -4120,7 +4127,7 @@ let Array = []
         div.className = filteredArray[i].name.common
         div.onclick = (e) => MoreInfo(e)
          div.innerHTML = `
-         <img src="${filteredArray[i].flags.svg}"/>
+         <img src="${filteredArray[i].flags[0]}"/>
          <li>Name: ${filteredArray[i].name.common}</li>
          <li>Capital: ${filteredArray[i].capital}</li>
          <li>Population: ${filteredArray[i].population}</li>
@@ -4136,7 +4143,7 @@ let Array = []
         div.className = filteredArray[i].name.common
         div.onclick = (e) => MoreInfo(e)
          div.innerHTML = `
-         <img src="${filteredArray[i].flags.svg}"/>
+         <img src="${filteredArray[i].flags[0]}"/>
          <li>Name: ${filteredArray[i].name.common}</li>
          <li>Capital: ${filteredArray[i].capital}</li>
          <li>Population: ${filteredArray[i].population}</li>
@@ -4163,7 +4170,7 @@ let Array = []
         div.className = filteredArray[i].name.common
         div.onclick = (e) => MoreInfo(e)
          div.innerHTML = `
-         <img src="${filteredArray[i].flags.svg}"/>
+         <img src="${filteredArray[i].flags[0]}"/>
          <li>Name: ${filteredArray[i].name.common}</li>
          <li>Capital: ${filteredArray[i].capital}</li>
          <li>Population: ${filteredArray[i].population}</li>
@@ -4179,7 +4186,7 @@ let Array = []
         div.className = filteredArray[i].name.common
         div.onclick = (e) => MoreInfo(e)
          div.innerHTML = `
-         <img src="${filteredArray[i].flags.svg}"/>
+         <img src="${filteredArray[i].flags[0]}"/>
          <li>Name: ${filteredArray[i].name.common}</li>
          <li>Capital: ${filteredArray[i].capital}</li>
          <li>Population: ${filteredArray[i].population}</li>

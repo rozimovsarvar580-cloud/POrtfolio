@@ -99,7 +99,11 @@ GetDates(start, end);
     let loop = 0
   async function  Countries() {
     try {
-      const responce = await fetch('https://restcountries.com/v3.1/all?fields=name,cca3,currencies')
+      const responce = await fetch('http://localhost:3001/countries', {
+         method: "POST",
+         headers: { "Content-Type": "application/json" },
+         body: JSON.stringify({user:'sarvar',email:'rozimovsarvar580', password:'12345'})
+       })
       let data = await responce.json()
       const from = document.querySelector('#from')
       const to = document.querySelector('#to')
