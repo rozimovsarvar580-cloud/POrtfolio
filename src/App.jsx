@@ -5,6 +5,7 @@ import './App.css'
 import Example from './example'
 import Country from "./country"
 import Currency from "./Currecy"
+import Chat from './chat'
 function App() {
   return (
   <BrowserRouter>
@@ -25,6 +26,7 @@ function App() {
         <Route path='/example/*' element={<Example></Example>}>
          <Route path="Country" element={<Country></Country>} />
          <Route path="Currency" element={<Currency></Currency>} />
+         <Route path='Chat' element ={<Chat></Chat>}></Route>
         </Route>
       </Routes>
     <div className='footer'>© 2026 Sarvar Rozimov. All Rights Reserved.</div>
