@@ -81,11 +81,7 @@ let Array = []
         let d = 0
         let r = 0
       try {
-        const responce = await fetch('http://localhost:3001/countries', {
-         method: "POST",
-         headers: { "Content-Type": "application/json" },
-         body: JSON.stringify({user:'sarvar',email:'rozimovsarvar580', password:'12345'})
-       })
+        const responce = await fetch('/countriesV3.json')
         const data = await responce.json()
         const CArds = document.querySelector('.CArds')
         const input =document.querySelector('input')
@@ -4103,11 +4099,7 @@ let Array = []
     filteredArray = []
         let i  = 0
      try {
-        const responce = await fetch('http://localhost:3001/countries', {
-         method: "POST",
-         headers: { "Content-Type": "application/json" },
-         body: JSON.stringify({user:'sarvar',email:'rozimovsarvar580', password:'12345'})
-       })
+        const responce = await fetch('/countriesV3.json')
         let data = await responce.json()
         data=data.sort((a,b)=>a.name.common.localeCompare(b.name.common))
         const input = document.querySelector('input')
